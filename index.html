@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Temperature Hot</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url(bg-image.jpg) no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        #spinner {
+            display: none;
+        }
+
+        #display {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form class="col-md-6 m-auto pt-5">
+            <div class="input-group mb-3">
+                <input id="city-name" type="text" class="form-control" placeholder="Enter a location for Weather ...">
+                <div class="input-group-append">
+                    <button onclick="searchTemperature()" type="button" class="btn btn-danger">Search</button>
+                </div>
+            </div>
+        </form>
+
+
+        <h3 id="date" class="text-center text-white"></h3>
+        <hr class="text-white w-25">
+        <div id="spinner">
+            <div class="text-center">
+                <div class="spinner-border text-warning" role="status">
+                    <span class="visually-hidden"></span>
+                </div>
+            </div>
+        </div>
+        <div class="weather-status text-white text-center" id="display">
+            <img id="weather-icon" src="https://openweathermap.org/img/wn/02d@2x.png" alt="">
+            <h1 id="city">Dhaka</h1>
+            <h3><span id="temperature">38.06</span>&deg;C</h3>
+            <h1 id="condition" class="lead">Clouds</h1>
+            <div class="d-flex justify-content-around">
+                <h3 id="sunrise"><span class="text-warning">Sunrise: </span><span id="hourssr"></span>: <span
+                        id="minutesr"></span>am</h3>
+                <h3 id="sunset"><span class="text-success">Sunset: </span><span id="hoursss"></span>: <span
+                        id="minutess"></span>pm</h3>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
